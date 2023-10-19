@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreX Redirect Client</title>
+</head>
+<body>
+
+  You will now be redirected. Please Wait...
+  <br>
+  Not working? Click [here.](https://explorex-webapp.vercel.app)
+
+<script>
+    // Check if the 'visited' cookie is set
+    if (document.cookie.indexOf('visited=') >= 0) {
+        // If the 'visited' cookie is found, redirect to the specified URL
+        window.location.href = 'https://explorex-webapp.vercel.app';
+    } else {
+        // If the 'visited' cookie is not found, set the cookie and redirect to 'example.com'
+        document.cookie = 'visited=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+        window.location.href = 'https://example.com';
+    }
+</script>
+
+</body>
+</html>
